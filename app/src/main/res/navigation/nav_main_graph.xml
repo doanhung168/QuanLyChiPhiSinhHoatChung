@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_createGroupFragment2"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchUserFragment"
+            app:destination="@id/searchUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifyFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.notify.NotifyFragment"
+        android:label="fragment_notify"
+        tools:layout="@layout/fragment_notify" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_accessFriendFragment"
+            app:destination="@id/accessFriendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.group.CreateGroupFragment"
+        android:label="CreateGroupFragment"
+        tools:layout="@layout/fragment_add_group_item" />
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.group.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group">
+        <action
+            android:id="@+id/action_groupFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_groupFragment_to_detainItemFragment"
+            app:destination="@id/detainItemFragment" />
+        <action
+            android:id="@+id/action_groupFragment_to_addMemberFragment"
+            app:destination="@id/addMemberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.item.AddItemFragment"
+        android:label="AddItemFragment"
+        tools:layout="@layout/fragment_add_item" />
+    <fragment
+        android:id="@+id/detainItemFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.item.DetainItemFragment"
+        android:label="DetainItemFragment"
+        tools:layout="@layout/fragment_detail_item" />
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.search.SearchUserFragment"
+        android:label="SearchUserFragment"
+        tools:layout="@layout/fragment_search_user" />
+    <fragment
+        android:id="@+id/accessFriendFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.setting.AcceptFriendFragment"
+        android:label="fragment_access_friend"
+        tools:layout="@layout/fragment_access_friend" />
+    <fragment
+        tools:layout="@layout/fragment_add_member"
+        android:id="@+id/addMemberFragment"
+        android:name="com.doanhung.spendandcollect.ui.main.home.group.add_member.AddMemberFragment"
+        android:label="AddMemberFragment" />
+
+</navigation>

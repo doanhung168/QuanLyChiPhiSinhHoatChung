@@ -1,0 +1,48 @@
+<resources>
+
+    <!--    Common   -->
+    <string name="app_name">SpendAndCollect</string>
+
+
+    <!--    String for OnBoardingScreen    -->
+    <!--Titles-->
+    <string name="first_slide_title">Search Your Location</string>
+    <string name="second_slide_title">Make A Call</string>
+    <string name="third_slide_title">Add Missing Place</string>
+    <string name="fourth_slide_title">Sit Back And Enjoy</string>
+
+    <!--Descriptions-->
+    <string name="first_slide_desc">You can search any place nearby or with-in the specified city. We will display specific or all related shops to match your search. </string>
+    <string name="second_slide_desc">We provide almost all the numbers of all departments and shops registered with us. You can perform bookings as well.</string>
+    <string name="third_slide_desc">If you have a shop or somethings and want to be a part of our growing industry then add your place by follwing simple steps.</string>
+    <string name="fourth_slide_desc">We will handle everything for you. As you have the app in your pocket then you.  </string>
+
+    <!--Buttons-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hello">Hello!</string>
+    <string name="sign_in_to_your_account">Sign In to your account</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="or_sign_in_with">------ or sign in with ------</string>
+    <string name="do_not_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_again_password">Enter Again Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="you_already_have_an_account">You already have an account!</string>
+    <string name="enter_email_or_phone_number">Phone Number</string>
+    <string name="enter_otp">Enter OTP</string>
+
+
+    <!--    Facebook -->
+    <string name="facebook_app_id">421788813111093</string>
+    <string name="fb_login_protocol_scheme">fb421788813111093</string>
+    <string name="facebook_client_token">7903f93c5440911477720766eec692cd</string>
+
+
+</resources>

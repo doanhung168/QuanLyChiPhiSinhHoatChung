@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "946220210989",
+    "project_id": "spendandcollect",
+    "storage_bucket": "spendandcollect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946220210989:android:349b451a51407dcf4411a4",
+        "android_client_info": {
+          "package_name": "com.doanhung.spendandcollect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946220210989-d8aemcdgra6ua30erqdltg724dvs0u70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doanhung.spendandcollect",
+            "certificate_hash": "095666da975c1f64ac87d4176f13d0daabc9f5cb"
+          }
+        },
+        {
+          "client_id": "946220210989-tu936dpuf0322ebe77tl537lq50v8luf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd_6OaXEH58mUizpgZALoQ59biu4mXMyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946220210989-tu936dpuf0322ebe77tl537lq50v8luf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

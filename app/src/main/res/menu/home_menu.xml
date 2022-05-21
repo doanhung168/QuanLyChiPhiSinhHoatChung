@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/createGroupFragment"
+        android:title="Add Item"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_item"
+        tools:ignore="HardcodedText" />
+
+    <item android:title="Search"
+        android:id="@+id/searchUserFragment"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search"
+        tools:ignore="AlwaysShowAction,HardcodedText" />
+</menu>

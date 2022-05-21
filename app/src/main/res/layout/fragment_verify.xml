@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="verifyViewModel"
+            type="com.doanhung.spendandcollect.ui.auth.verify.VerifyViewModel" />
+
+        <variable
+            name="activity"
+            type="android.app.Activity" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{verifyViewModel.isLoading ? @color/light: @color/white}"
+        tools:ignore="HardcodedText">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@{verifyViewModel.isLoading ? @color/light : @color/white}">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="@{verifyViewModel.isLoading ? View.VISIBLE : View.INVISIBLE}"
+                app:SpinKit_Color="@color/colorPrimaryDark" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Verification Code"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintBottom_toTopOf="@+id/gl_v_25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Please type verification code sent"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/tvSentTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="to 0868358175"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/edt1"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/opt__edt_bg"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={verifyViewModel.verificationCode1}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    app:nextView="@{edt2}"
+                    app:preView="@{null}"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/edt2"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/opt__edt_bg"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={verifyViewModel.verificationCode2}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    app:nextView="@{edt3}"
+                    app:preView="@{edt1}"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/edt3"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/opt__edt_bg"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={verifyViewModel.verificationCode3}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    app:nextView="@{edt4}"
+                    app:preView="@{edt2}"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/edt4"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/opt__edt_bg"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={verifyViewModel.verificationCode4}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    app:nextView="@{edt5}"
+                    app:preView="@{edt3}"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/edt5"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/opt__edt_bg"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={verifyViewModel.verificationCode5}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    app:nextView="@{edt6}"
+                    app:preView="@{edt4}"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/edt6"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/opt__edt_bg"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={verifyViewModel.verificationCode6}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    app:nextView="@{null}"
+                    app:preView="@{edt5}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvResentOPT"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="32dp"
+                android:onClick="@{(view) -> verifyViewModel.reSendOTP(view, activity)}"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/gl_v_75"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtHelper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@{verifyViewModel.txtHelper}"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="simpleUser"
+            type="com.doanhung.spendandcollect.data.model.remote.model.SimpleUser" />
+
+        <variable
+            name="acceptInterface"
+            type="com.doanhung.spendandcollect.ui.main.setting.AcceptFriendAdapter.AcceptFriendInterface" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            imageUrl="@{simpleUser.avatar}"
+            error="@{@drawable/user}"
+            android:id="@+id/imvAvatar"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:padding="8dp"
+            android:src="@drawable/user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:lines="1"
+            android:text="@{simpleUser.userName}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imvAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{`Id: ` + simpleUser.id}"
+            android:textColor="@color/light"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/btnAccept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imvAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Đồng ý"
+            android:onClick="@{() -> acceptInterface.accept(simpleUser.id)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnNonAccept"
+            app:layout_constraintStart_toEndOf="@+id/imvAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
+        <Button
+            android:id="@+id/btnNonAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:onClick="@{() -> acceptInterface.noAccept(simpleUser.id)}"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAccept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnAccept"
+            app:layout_constraintTop_toTopOf="@+id/btnAccept" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

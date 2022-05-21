@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="searchUser"
+            type="com.doanhung.spendandcollect.data.model.remote.model.SearchUser" />
+
+        <variable
+            name="userInterface"
+            type="com.doanhung.spendandcollect.ui.main.home.search.SearchUserAdapter.UserInterface" />
+
+        <variable
+            name="auth"
+            type="com.doanhung.spendandcollect.data.model.remote.model.SearchUser" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            error="@{@drawable/ic_image}"
+            imageUrl="@{searchUser.avatar}"
+            android:src="@drawable/user"
+            android:padding="10dp"
+            android:layout_width="96dp"
+            android:layout_height="96dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{searchUser.userName}"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@{`Id: ` + searchUser.id}" />
+
+            <Button
+                app:auth="@{auth}"
+                app:searchUser="@{searchUser}"
+                android:text="Add Friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_bg"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:onClick="@{() -> userInterface.onClickFriendBtn(searchUser, auth)}"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>
